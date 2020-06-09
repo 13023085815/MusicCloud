@@ -1,0 +1,78 @@
+{
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"enhance": true
+	},
+	"appid": "wxf6a3e4dfd65f066b",
+	"projectname": "music",
+	"libVersion": "2.8.1",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
+	"compileType": "miniprogram",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 0,
+			"list": [
+				{
+					"id": 0,
+					"name": "pages/blog-edit/blog-edit",
+					"pathName": "pages/blog-edit/blog-edit",
+					"query": "nickName=\"状元岐\"& avataUrl:=\"https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqKyqQdia8gIJXMiaVIXiaHYyfff1Na1tcuEdQkskScTfJd4GQ5ojytXbuY3Zt1PmS5bKJjIWyk8lxKw/132\"",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "发现页面",
+					"pathName": "pages/blog/blog",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/min/min",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "demo",
+					"pathName": "pages/demo/demo",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/demo/demo",
+					"pathName": "pages/demo/demo",
+					"scene": null
+				}
+			]
+		}
+	}
+}

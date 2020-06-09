@@ -1,0 +1,30 @@
+<view class="container">
+  <!-- 头部 -->
+  <view class="header">
+    <view class="publish-container" bindtap="onPublish">
+      <i class="iconfont icon-fabu"></i>
+    </view>
+    <view class="search-container">
+      <y-search bind:search="onSearch"></y-search>
+    </view>
+  </view>
+  <!-- 博客列表组件 -->
+  <view class="blog-list">
+    <block wx:for="{{blogList}}" wx:key="_id">
+      <view class="blog-panel">
+        <y-blog-cart blog="{{item}}" data-blogId="{{item._id}}" bindtap="goComment"></y-blog-cart>
+        <y-blog-ctrl iconfont="iconfont"
+         icon-pinglun="icon-pinglun" 
+         icon-fenxiang="icon-fenxiang"
+         blogId="{{item._id}}"
+         blog="{{item}}"
+        ></y-blog-ctrl>
+      </view>
+    </block>
+    <view hidden="{{!isReachBottom}}" class="blog-bottom">没有更多内容了...</view>
+  </view>
+  <!-- 显示没有你要的搜索内容 -->
+  <view class="blog-noList" hidden="{{!isNolist}}">没有更多搜索内容了</view>
+  <!-- 底部弹出层 -->
+  <y-login modalShow="{{modalShow}}" bind:loginsuccess="onloginSuccess" bind:loginfail="onloginFail"></y-login>
+</view>

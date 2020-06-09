@@ -1,0 +1,18 @@
+<view class="blog">
+    <view class="blog-title">
+        <image class="blog-portrait" src="{{blog.avataUrl}}"></image>
+        <view class="blog-box">
+            <view class="blog-nickName">{{blog.nicName}}</view>
+            <view class="blog-time">{{createTime}}</view>
+        </view>
+    </view>
+
+    <view class="blog-content">{{blog.content}}</view>
+    <view class="blog-img">
+       <block wx:for="{{blog.img}}" wx:key="index">
+           <!-- catch绑定事件可以阻止事件冒泡 -->
+         <image class="img" src="{{item}}" mode="aspectFill" catch:tap="onPreview" data-imgSrc="{{item}}"
+         data-imgs="{{blog.img}}"></image>
+       </block>
+    </view>
+</view>

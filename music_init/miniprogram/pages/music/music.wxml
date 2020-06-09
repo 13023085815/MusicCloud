@@ -1,0 +1,15 @@
+<swiper indicator-dots="true" autoplay="true" interval="2000">
+  <block wx:for="{{swiperImgs}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+    <swiper-item>
+      <image src="{{item.fileid}}" mode="widthFix"></image>
+    </swiper-item>
+  </block>
+</swiper>
+
+<!-- 展示歌单列表；这里的数据为网易云推荐的歌单 -->
+<view class="play-container">
+  <block wx:for="{{playlist}}" wx:key="id">
+    <y-playlist playlist="{{item}}"></y-playlist>
+    
+  </block>
+</view>

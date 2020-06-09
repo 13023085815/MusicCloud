@@ -1,0 +1,15 @@
+<scroll-view hidden="{{isLyricShow}}" class="lyric-scroll" scroll-y="true" scroll-top="{{scrollTop}}" scroll-with-animation="true">
+    <view class="lyric-panel">
+        <block wx:for="{{lyriclist}}" wx:key="item" wx:for-item="item" wx:for-index="index">
+            <view class="lyric {{nowLyricIndex==index?'hightlight-lyric':''}}">{{item.lrc}}</view>
+        </block>
+    </view>
+</scroll-view>
+<!-- 
+    1：数据从组
+    [{歌词，歌词结束时间},{}]
+    2：写好样式 将数据渲染到页面上
+    =====> 要想实现下面的内容：获取到 当前播放的时间   
+    3：求滚动高度  
+    4：高亮显示当前播放的歌词？ 
+ -->

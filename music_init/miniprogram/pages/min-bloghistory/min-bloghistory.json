@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "y-blog-cart":"/components/blog-cart/blog-cart",
+    "y-blog-ctrl":"/components/blog-ctrl/blog-ctrl"
+  },
+  "navigationBarTitleText": "我的发布"
+}

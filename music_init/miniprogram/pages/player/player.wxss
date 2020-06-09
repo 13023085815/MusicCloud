@@ -1,0 +1,123 @@
+.player-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    filter: blur(40rpx);
+    opacity: 0.5;
+    z-index: -1;
+}
+.player-mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background-color: #222222;
+}
+.player-info{
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.player-disc{
+    width: 592rpx;
+    height: 592rpx;
+    background: url("https://s3.music.126.net/mobile-new/img/disc.png?d3bdd1080a72129346aa0b4b4964b75f=") center/cover no-repeat;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,140rpx);
+}
+.player-disc::after{
+    content: '';
+    width: 192rpx;
+    height: 274rpx;
+    position: absolute;
+    background: url('https://s3.music.126.net/m/s/img/needle.png?702cf6d95f29e2e594f53a3caab50e12') center/cover no-repeat;
+    background-size: 100% 100%;
+    /* 暂停时候 bar 离开光碟 */
+    top: -150rpx;
+    left: 266rpx;
+    transform: rotate(-15deg);
+    transform-origin: 24rpx 10rpx;
+    /* 给bar 动画效果 */
+    transition: transform 0.5s ease;
+}
+
+/* 播放时候；让bar 放在光碟上 */
+.play.player-disc::after{
+    transform: rotate(0deg);
+}
+
+
+
+.player-img{
+    width: 360rpx;
+    height: 360rpx;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -184rpx;
+    margin-left: -184rpx;
+}
+
+/* 播放光碟转起来 */
+.rotation{
+    animation: rotation 12s linear infinite;
+    -moz-animation: rotation 12s linear infinite;
+    -webkit-animation: rotation 12s linear infinite;
+    -o-animation: rotation 12s linear infinite;
+
+}
+@keyframes rotation {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+/* 音乐暂停；转动图片动画也停止 */
+.rotation-paused{
+    animation-play-state: paused;
+}
+
+
+.control{
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform:translateX(-50%);
+    display: flex;
+    align-items: center;
+
+}
+.control .iconfont{
+    color: #fefefe;
+}
+.icon-shangyishoushangyige,.icon-xiayigexiayishou{
+    font-size: 80rpx;
+}
+.icon-bofang1,.icon-zanting1{
+    font-size: 120rpx;
+    margin: 0 50rpx;
+}
+
+/* 进度条样式处理 */
+.progress-bar{
+    width: 90%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 24%;
+}
+page,.lyric-box{
+  height: 100%
+}

@@ -1,0 +1,15 @@
+<view class="container">
+    <text class="time">{{showTime.currentTime}}</text>
+    <view class="control">
+        <!-- movable-area 可拖拽的范围。 -->
+        <movable-area class="movable-area">
+            <!-- 可移动的视图容器，在页面中可以拖拽滑动。movable-view必须在 movable-area 组件中，并且必须是直接子节点，否则不能移动。 -->
+            <!-- x 表示移动的位置 -->
+            <movable-view direction="horizontal" class="movable-view" damping="1000" x="{{movableDis}}"
+            bindchange="onChange" bind:touchend="onTouchEnd"></movable-view>
+        </movable-area>
+        <!-- 进度条 进度是按照 100分等分的 -->
+        <progress stroke-width="4" background-color="#969696" activeColor="#fff" percent="{{progress}}"></progress>
+    </view>
+    <text class="time">{{showTime.totalTime}}</text>
+</view>

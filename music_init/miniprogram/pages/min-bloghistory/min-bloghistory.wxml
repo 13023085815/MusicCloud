@@ -1,0 +1,9 @@
+<view>
+    <block wx:for="{{blogList}}" wx:key="_id">
+        <y-blog-cart blog="{{item}}" bindtap="goComment" data-blogId="{{item._id}}"></y-blog-cart>
+        <y-blog-ctrl blogId="{{item._id}}" blog="{{item}}"
+         iconfont="iconfont" 
+        icon-pinglun="icon-pinglun" 
+        icon-fenxiang="icon-fenxiang"></y-blog-ctrl>        
+    </block>
+</view>

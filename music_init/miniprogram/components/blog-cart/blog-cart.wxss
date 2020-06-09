@@ -1,0 +1,35 @@
+page{
+    background-color: #f1f1f1;
+}
+.blog{
+    padding: 20rpx;
+    background-color: #ffffff;
+}
+.blog-title{
+    display: flex;
+}
+.blog-nickName{
+    font-weight: bolder;
+}
+.blog-portrait{
+    width: 64rpx;
+    height: 64rpx;
+    border-radius: 50%;
+    margin-right: 20rpx;
+}
+.blog-time{
+    font-size: 24rpx;
+    color: #ccc;
+}
+.blog-img image{
+    width: 230rpx;
+    height: 230rpx;
+    margin-right: 10rpx;
+    margin-bottom: 0rpx;
+}
+ .blog .blog-img image:nth-child(3n){
+    margin-right: 0;
+}
+.blog-content{
+    margin: 10rpx 0rpx;
+}

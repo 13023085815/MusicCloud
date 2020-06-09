@@ -1,0 +1,11 @@
+<!-- miniprogram/pages/demo/demo.wxml -->
+<text>miniprogram/pages/demo/demo.wxml</text>
+<button bindtap="music">获取音乐</button>
+<button bindtap="moview">获取电影</button>
+<progress stroke-width="4" background-color="#969696" activeColor="#fff" percent="{{progress}}"></progress>
+<button bindtap="pro">开始</button>
+
+<view>
+<text>{{count}}</text>
+</view>
+<button bindtap="add">点击+++</button>

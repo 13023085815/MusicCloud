@@ -1,0 +1,34 @@
+<!-- 获取用户信息的方式；适用于直接展示 -->
+<view class="profile-header">
+    <view class="avatar-url">
+    <!-- 直接系那是用户信息 -->
+        <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view class="nickName">
+        <open-data type="userNickName"></open-data>
+    </view>
+</view>
+<!-- 导航部分 -->
+<view class="nav">
+    <view class="nav-item">
+        <navigator class="content" url="/pages/min-playhistory/min-playhistory" hover-class="none">
+            <i class="iconfont icon-ziyuanldpi"></i>
+            <text class="text">最近播放</text>
+            <i class="iconfont icon-xiangyou"></i>
+        </navigator>
+    </view>
+    <view class="nav-item">
+        <navigator class="content" url="/pages/min-bloghistory/min-bloghistory" hover-class="none">
+            <i class="iconfont icon-shoucang"></i>
+            <text class="text">我的发现</text>
+            <i class="iconfont icon-xiangyou"></i>
+        </navigator>
+    </view>
+    <view class="nav-item">
+        <view class="content" bindtap="onGetOrCode">
+            <i class="iconfont icon-weibiaoti--"></i>
+            <text class="text">小程序码</text>
+            <i class="iconfont icon-xiangyou"></i>
+        </view>
+    </view>
+</view>
